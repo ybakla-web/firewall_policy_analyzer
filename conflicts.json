@@ -1,0 +1,30 @@
+[
+    {
+        "network_rule": "ANY,TCP,0.0.0.0/0,ANY,10.0.0.1/32,80,ACCEPT",
+        "application_rule": "user1 -> 10.0.0.1/32 (DENY)",
+        "type": "ACTION_MISMATCH",
+        "severity": "HIGH",
+        "description": "Network ALLOW vs Application DENY"
+    },
+    {
+        "network_rule": "ANY,TCP,0.0.0.0/0,ANY,10.0.0.2/32,443,DENY",
+        "application_rule": "admin -> 10.0.0.2/32 (ALLOW)",
+        "type": "ACTION_MISMATCH",
+        "severity": "CRITICAL",
+        "description": "Network DENY vs Application ALLOW"
+    },
+    {
+        "network_rule": "ANY,TCP,0.0.0.0/0,ANY,10.0.0.0/24,8080,ACCEPT",
+        "application_rule": "user1 -> 10.0.0.1/32 (DENY)",
+        "type": "ACTION_MISMATCH",
+        "severity": "HIGH",
+        "description": "Network ALLOW vs Application DENY"
+    },
+    {
+        "network_rule": "ANY,TCP,0.0.0.0/0,ANY,10.0.0.0/24,8080,ACCEPT",
+        "application_rule": "developer -> 10.0.0.5/32 (DENY)",
+        "type": "ACTION_MISMATCH",
+        "severity": "HIGH",
+        "description": "Network ALLOW vs Application DENY"
+    }
+]
