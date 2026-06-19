@@ -6,7 +6,7 @@ class ApplicationPolicy:
     def __init__(self, subject, resource, action):
         self.subject = subject
         self.resource = resource
-        self.action = action.upper()
+        self.action = action
     def __repr__(self):
         return f"{self.subject} -> {self.resource} ({self.action})"
 
